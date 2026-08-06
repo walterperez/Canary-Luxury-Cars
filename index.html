@@ -41,7 +41,7 @@
     <div id="root"></div>
     <script>
       (function () {
-        const base = process.env.IS_GITHUB_PAGE ? "/Canary-Luxury-Cars" : "";
+        const base = process?.env?.IS_GITHUB_PAGE ? "/Canary-Luxury-Cars" : "";
         var script = document.createElement("script");
         script.type = "module";
         script.src = base + "/src/main.jsx";
