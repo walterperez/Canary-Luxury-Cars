@@ -28,7 +28,7 @@ export const getPath = (localPath) => {
     "import.meta.env": import.meta.env,
   });
 
-  const base = GITHUB_PAGES ? "/Canary-Luxury-Cars/" : "";
+  const base = VITE_GITHUB_PAGES ? "/Canary-Luxury-Cars/" : "";
 
   console.log("DEBUG -> base", base);
 
