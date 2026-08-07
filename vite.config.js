@@ -6,10 +6,6 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     server: { proxy: { "/api": "http://localhost:3001" } },
     build: { target: "es2020" },
-    base: process.env.GITHUB_PAGES ? "/Canary-Luxury-Cars/" : "",
-    define: {
-      __APP_ENV__: JSON.stringify(process.env.NODE_ENV),
-      __GITHUB_PAGES__: JSON.stringify(process.env.GITHUB_PAGES),
-    },
+    base: process.env.VITE_GITHUB_PAGES ? "/Canary-Luxury-Cars/" : "",
   };
 });
