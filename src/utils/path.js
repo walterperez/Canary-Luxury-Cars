@@ -6,22 +6,8 @@ export const isProduction = () => {
   return import.meta.env.PROD;
 };
 
-export const loadEnvConfig = () => {
-  if (isDevelopment()) {
-    return isDevelopment();
-  }
-  if (isProduction()) {
-    return isProduction();
-  }
-  return null;
-};
-
 export const loadEnvConfigKey = (key) => {
-  if (loadEnvConfig()) {
-    console.log("DEBUG -> loadEnvConfig", loadEnvConfig());
-    return loadEnvConfig()[key];
-  }
-  return null;
+  return import.meta.env?.[key] || null;
 };
 
 export const getPath = (localPath) => {
