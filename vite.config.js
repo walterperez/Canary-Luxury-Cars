@@ -5,5 +5,5 @@ export default defineConfig({
   plugins: [react()],
   server: { proxy: { "/api": "http://localhost:3001" } },
   build: { target: "es2020" },
-  base: "/",
+  base: "/Canary-Luxury-Cars/",
 });
